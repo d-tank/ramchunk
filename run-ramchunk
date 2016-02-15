@@ -3,10 +3,10 @@
 /bin/chmod 777 /mnt/ramdisk ; 
 
 #start etcd
-/usr/local/bin/run-etcd --discovery $DISCOVERY >> /var/log/etcd.log 2>&1 
+#/usr/local/bin/run-etcd --discovery $DISCOVERY >> /var/log/etcd.log 2>&1 
 
 #mount ramdisk
-/bin/mount -t tmpfs -o size=512m tmpfs /mnt/ramdisk
+/bin/mount -t tmpfs -o size=512m ext4 /mnt/ramdisk
 
 #start chunkserver
-/usr/sbin/mfschunkserver -f start ;
+#/usr/sbin/mfschunkserver -f start ;
